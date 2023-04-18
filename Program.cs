@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.IO;
+
 
 namespace CursoC_
 {
@@ -129,151 +128,158 @@ y saltar comoquiera y meter simolos *(*&^%##) de lo que sea");
              Estructuta de control de flujo de datos
             if, else if, else, switch, case, break, default */
 
-           /* int peso;
-            int edad;
-            string status;
+            /* int peso;
+             int edad;
+             string status;
 
-            Console.WriteLine("Ingresa tu peso");
-            peso = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ingresa tu edad");
-            edad = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("¿tu status es pobre o rico?");
-            status = Convert.ToString(Console.ReadLine());
+             Console.WriteLine("Ingresa tu peso");
+             peso = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Ingresa tu edad");
+             edad = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("¿tu status es pobre o rico?");
+             status = Convert.ToString(Console.ReadLine());
+             Console.Clear();
+
+             //estructura if
+             if (edad <= 18 && peso >= 85)
+             {
+                 if (status == "pobre")
+                 {
+                     Console.WriteLine("Estas jodido");
+                 }
+                 else
+                 {
+                     Console.WriteLine("Hay esperanza");
+                 }
+
+
+                 Console.WriteLine("Tienes sobrepeso");
+             }
+             else if (edad >= 18 && peso <= 70)
+             {
+                 Console.WriteLine("Estas en linea");
+             }
+             else
+             {
+                 Console.WriteLine("estas de cementerio");
+             }
+
+             //Estructuta switch
+
+             switch (peso)
+             {
+                 case 50:
+                     Console.WriteLine("estas delgado");
+                     break;
+                 case 70:
+                     Console.WriteLine("Tu peso es correcto");
+                     break;
+                 case 90:
+                     Console.WriteLine("Tienes sobrepeso");
+                     break;
+                 default:
+                     Console.WriteLine("Estas muy jodido");
+                     break;
+             }*/
+
+
+            //int a = Console.In.Peek();
+
+
+            //if (a == 'x')
+            //{
+            //    Console.WriteLine("has adivinado la letra " + (char)a);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Dale de nuevo");
+            //}
+
+
+            //Console.WriteLine((char)a);
+
+            //Console.WriteLine(Convert.ToChar(a));
+
+            //CLASE 9 
+
+            //string nombre = "Orion Ra ";
+
+            //for (int i = 0; i <= 3; i++)
+            //{
+            //    foreach (char letra in nombre)
+            //    {
+
+            //        Thread.Sleep(500);
+            //        Console.Write(" " + letra + " ");
+            //    }
+            //    Console.Clear();
+            //}
+
+            //OTRA
+
+            //for (char i = 'a'; i <= 'z'; i++)
+            //{
+            //    Thread.Sleep(500);
+            //    Console.Write(" " + i + " ");
+            //}
+
+            //Console.WriteLine();
+
+
+            //string[] emp = new string[5];
+
+            //emp[0] = "pedro";
+            //emp[1] = "juan";
+            //emp[2] = "maria";
+            //emp[3] = "daniela";
+            //emp[4] = "Orion";
+
+            //foreach (string reg in emp)
+            //{
+            //    Thread.Sleep(500);
+            //    Console.WriteLine(reg);
+
+            //}
+
+            // OTRA
+
+            //int[,] num = new int[3, 3];
+
+            //for (int fila = 0; fila < 3; fila++)
+            //{
+            //    for (int col = 0; col < 3; col++)
+            //    {
+
+            //        Console.WriteLine("dame un numero ");
+            //        num[fila,col] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+            //Console.Clear();
+
+
+            //for (int fila = 0; fila < 3; fila++)
+            //{
+            //    for (int col = 0; col < 3; col++)
+            //    {
+
+            //        Thread.Sleep(500);
+            //        Console.Write(" " + num[fila, col]);
+            //    }
+            //    Console.WriteLine();
+
+            //}
+
+            //Clase 10 CREAR ARTCHIVO
+
+            TextWriter archivo;
+            archivo = new StreamWriter("archivo.txt");
+            string mensaje = Console.ReadLine();
+            archivo.WriteLine(mensaje);
+            archivo.Close();
             Console.Clear();
+            Console.WriteLine("el archivo se ha guardado");
 
-            //estructura if
-            if (edad <= 18 && peso >= 85)
-            {
-                if (status == "pobre")
-                {
-                    Console.WriteLine("Estas jodido");
-                }
-                else
-                {
-                    Console.WriteLine("Hay esperanza");
-                }
-
-
-                Console.WriteLine("Tienes sobrepeso");
-            }
-            else if (edad >= 18 && peso <= 70)
-            {
-                Console.WriteLine("Estas en linea");
-            }
-            else
-            {
-                Console.WriteLine("estas de cementerio");
-            }
-
-            //Estructuta switch
-
-            switch (peso)
-            {
-                case 50:
-                    Console.WriteLine("estas delgado");
-                    break;
-                case 70:
-                    Console.WriteLine("Tu peso es correcto");
-                    break;
-                case 90:
-                    Console.WriteLine("Tienes sobrepeso");
-                    break;
-                default:
-                    Console.WriteLine("Estas muy jodido");
-                    break;
-            }*/
-
-
-            int a = Console.In.Peek();
-
-            
-            if (a == 'x')
-            {
-                Console.WriteLine("has adivinado la letra " + (char)a);
-            }
-            else
-            {
-                Console.WriteLine("Dale de nuevo");
-            }
-
-
-            Console.WriteLine((char)a);
-
-            Console.WriteLine(Convert.ToChar(a));
-
-            /* CLASE 9 */
-
-            string nombre = "Orion Ra ";
-
-            for (int i = 0; i <= 3; i++)
-            {
-                foreach (char letra in nombre)
-                {
-
-                    Thread.Sleep(500);
-                    Console.Write(" " + letra + " ");
-                }
-                Console.Clear();
-            }
-
-
-            for (char i = 'a'; i <= 'z'; i++)
-            {
-                Thread.Sleep(500);
-                Console.Write(" " + i + " ");
-            }
-
-            Console.WriteLine();
-
-
-            string[] emp = new string[5];
-
-            emp[0] = "pedro";
-            emp[1] = "juan";
-            emp[2] = "maria";
-            emp[3] = "daniela";
-            emp[4] = "Orion";
-
-            foreach (string reg in emp)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine(reg);
-
-            }
-
-            int[,] num = new int[3, 3];
-
-            for (int fila = 0; fila < 3; fila++)
-            {
-                for (int col = 0; col < 3; col++)
-                {
-
-                    Console.WriteLine("dame un numero ");
-                    num[fila,col] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
-            Console.Clear();
-
-
-            for (int fila = 0; fila < 3; fila++)
-            {
-                for (int col = 0; col < 3; col++)
-                {
-
-                    Thread.Sleep(500);
-                    Console.Write(" " + num[fila, col]);
-                }
-                Console.WriteLine();
-
-            }
-
-            //Clase 10
-
-
-
-
-
-            Console.ReadKey();
+             Console.ReadKey();
 
 
 
